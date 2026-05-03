@@ -1,37 +1,37 @@
-# Local RAG System (Offline Q&A over Documents)
+# Local RAG System (Offline Q&A over Documents)<br>
 
-Overview
+Overview<br>
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline using a local LLM via Ollama and the Gemma 2B model.
-It enables users to query custom data and receive context-grounded answers without external APIs.
+This project implements a Retrieval-Augmented Generation (RAG) pipeline using a local LLM via Ollama and the Gemma 2B model.<br>
+It enables users to query custom data and receive context-grounded answers without external APIs.<br>
 
-Architecture
-Query → Embeddings → FAISS → Top-K Chunks → LLM → Answer
+Architecture<br>
+Query → Embeddings → FAISS → Top-K Chunks → LLM → Answer<br>
 
-Tech Stack
-Python
-FAISS (vector search)
-Sentence Transformers (embeddings)
-Ollama (local LLM)
+Tech Stack<br>
+Python<br>
+FAISS (vector search)<br>
+Sentence Transformers (embeddings)<br>
+Ollama (local LLM)<br>
 
-How to Run
-git clone <rag-system>
-cd rag-system
+How to Run<br>
+git clone <rag-system><br>
+cd rag-system<br>
 
-python3 -m venv rag_env
-source rag_env/bin/activate
+python3 -m venv rag_env<br>
+source rag_env/bin/activate<br>
 
-pip install -r requirements.txt
-python app/main.py
+pip install -r requirements.txt<br>
+python app/main.py<br>
 
-Features
-Fully offline (no API cost)
-Semantic retrieval using FAISS
-Context-aware responses (reduces hallucination)
-Debug mode showing retrieved chunks
+Features<br>
+Fully offline (no API cost)<br>
+Semantic retrieval using FAISS<br>
+Context-aware responses (reduces hallucination)<br>
+Debug mode showing retrieved chunks<br>
 
-Future Improvements
-PDF ingestion
-Streamlit UI
-Multi-document support
-Hybrid search
+Future Improvements<br>
+PDF ingestion<br>
+Streamlit UI<br>
+Multi-document support<br>
+Hybrid search<br>
