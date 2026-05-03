@@ -1,0 +1,12 @@
+Name: requests
+Version: 2.33.1
+
+Name: faiss-cpu
+Version: 1.13.2
+
+Name: numpy
+Version: 2.4.4
+
+Name: sentence-transformers
+Version: 5.4.1
+
