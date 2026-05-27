@@ -63,3 +63,7 @@ What is the leave policy?
 - Reranking
 - Streamlit interface
 - PDF ingestion
+
+## Result
+
+![Dashboard Overview](Result.png)
