@@ -1,37 +1,65 @@
-# Local RAG System (Offline Q&A over Documents)<br>
+# RAG System using FAISS + Ollama
 
-Overview<br>
+A lightweight Retrieval-Augmented Generation (RAG) pipeline built using:
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline using a local LLM via Ollama and the Gemma 2B model.<br>
-It enables users to query custom data and receive context-grounded answers without external APIs.<br>
+- FAISS for vector similarity search
+- Sentence Transformers for embeddings
+- Ollama for local LLM inference
+- Gemma 2B as the generation model
 
-Architecture<br>
-Query → Embeddings → FAISS → Top-K Chunks → LLM → Answer<br>
+## Architecture
 
-Tech Stack<br>
-Python<br>
-FAISS (vector search)<br>
-Sentence Transformers (embeddings)<br>
-Ollama (local LLM)<br>
+Document
+→ Chunking
+→ Embedding Generation
+→ FAISS Indexing
+→ Vector Retrieval
+→ Prompt Assembly
+→ Ollama Response Generation
 
-How to Run<br>
-git clone <rag-system><br>
-cd rag-system<br>
+## Features
 
-python3 -m venv rag_env<br>
-source rag_env/bin/activate<br>
+- Semantic search using embeddings
+- Local inference using Ollama
+- Modular architecture
+- Configurable chunking
+- Cosine similarity retrieval
+- Defensive error handling
 
-pip install -r requirements.txt<br>
-python app/main.py<br>
+## Installation
 
-Features<br>
-Fully offline (no API cost)<br>
-Semantic retrieval using FAISS<br>
-Context-aware responses (reduces hallucination)<br>
-Debug mode showing retrieved chunks<br>
+```bash
+pip install -r requirements.txt
+```
 
-Future Improvements<br>
-PDF ingestion<br>
-Streamlit UI<br>
-Multi-document support<br>
-Hybrid search<br>
+## Run Ollama
+
+```bash
+ollama run gemma:2b
+```
+
+## Usage
+
+Create a `sample.txt` file.
+
+Run:
+
+```bash
+python app.py
+```
+
+## Example Query
+
+```txt
+Ask a question:
+What is the leave policy?
+```
+
+## Future Improvements
+
+- Metadata filtering
+- Hybrid retrieval (BM25 + vector search)
+- Persistent FAISS index
+- Reranking
+- Streamlit interface
+- PDF ingestion
