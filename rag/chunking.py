@@ -26,3 +26,28 @@ def chunk_text(
             chunks.append(chunk)
 
     return chunks
+
+def chunk_pages(
+    pages: list[dict],
+    chunk_size: int,
+    overlap: int
+) -> list[dict]:
+    """Chunk PDF pages while preserving source and page metadata."""
+
+    chunks = []
+
+    for page in pages:
+        page_chunks = chunk_text(
+            text=page["text"],
+            chunk_size=chunk_size,
+            overlap=overlap
+        )
+
+        for chunk in page_chunks:
+            chunks.append({
+                "text": chunk,
+                "source": page["source"],
+                "page": page["page"]
+            })
+
+    return chunks
